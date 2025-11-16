@@ -14,30 +14,32 @@
     }
 </style>
 <body class="bg-[rgb(30,32,37)] text-white">
-    <header class="flex flex-col justify-center items-center pt-10 pb-10">
+    <header class="flex flex-col justify-center items-center pt-10 pb-8">
         <h1 class="text-4xl">ACUARELAS Y OBRAS DE AUTOR</h1>
         <img src="./assets/firma.avif" alt="">
         <h2 class="text-2xl">@vulpes.acuarelanomada</h2>
     </header>
-    <section class="flex flex-wrap justify-center">
-        <img src="./assets/img1.avif" alt="">
-        <img src="./assets/img3.avif" alt="">
+
+    <section class="flex flex-row flex-wrap justify-center p-4 pt-0">
+        <img class="w-1/2" src="./assets/img1.avif" alt="">
+        <img class="w-1/2" src="./assets/img3.avif" alt="">
         <img src="./assets/img2.avif" alt="">
     </section>
-<section class="grid grid-cols-2 gap-8 m-4">
-    <div class="flex items-center justify-center overflow-hidden">
-        <img src="./assets/img4.avif" class="w-full h-full object-contain" alt="Imagen">
-    </div>
-    
-    <div class="flex flex-col gap-16 items-center justify-center">
-        <h2 class="text-7xl text-balance text-center">El <b class="text-yellow-500">mundo</b> a través de mis <b>ojos</b>.</h2>
-        <div class="flex flex-row gap-8 items-center justify-center gap-4">
-            <img src="./assets/img5.avif" alt="">
-            <p class="text-xl text-balance w-[40%]">Mis obras son mi registro y mi legado. Cada una de ellas está hecha con la intención de producir sensaciones y emociones en el espectador.</p>
+
+    <section class="grid grid-cols-2 gap-8 m-4">
+        <div class="flex items-center justify-center overflow-hidden">
+            <img src="./assets/img4.avif" class="w-full h-full object-contain" alt="Imagen">
         </div>
-        <a class="bg-blue-500 rounded-full px-4 py-2 shadow-xl" href="https://heyzine.com/flip-book/859d21f773.html#page/1">Portafolio online</a>
-    </div>
-</section>
+        
+        <div class="flex flex-col gap-16 items-center justify-center">
+            <h2 class="text-7xl text-balance text-center">El <b class="text-yellow-500">mundo</b> a través de mis <b>ojos</b>.</h2>
+            <div class="flex flex-row gap-8 items-center justify-center gap-4">
+                <img src="./assets/img5.avif" alt="">
+                <p class="text-xl text-balance w-[40%]">Mis obras son mi registro y mi legado. Cada una de ellas está hecha con la intención de producir sensaciones y emociones en el espectador.</p>
+            </div>
+            <a class="bg-blue-500 rounded-full px-4 py-2 shadow-xl" href="https://heyzine.com/flip-book/859d21f773.html#page/1">Portafolio online</a>
+        </div>
+    </section>
 
 <section class="grid grid-cols-2 gap-8 m-4">
     <div class="flex flex-col items-center justify-center overflow-hidden gap-8">
@@ -94,7 +96,7 @@ Mi misión es entregar esta belleza de lo simple y cotidiano a través de mi obr
           <button id="enviar" type="button" onclick="enviarFormulario()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex-1">
             Enviar
           </button>
-          <button type="button" onclick="cerrarFormulario()" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded flex-1">
+          <button id="cancelar" type="button" onclick="cerrarFormulario()" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded flex-1">
             Cancelar
           </button>
         </div>
@@ -198,14 +200,21 @@ Mi misión es entregar esta belleza de lo simple y cotidiano a través de mi obr
       const email = document.getElementById('email').value;
       const mensaje = document.getElementById('mensaje').value;
       const btnEnviar = document.getElementById('enviar');
+      const cancelar = document.getElementById('cancelar');
 
       if (!nombre || !email || !mensaje) {
         alert('Por favor completa todos los campos');
         return;
       }
 
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+  alert('Por favor ingresa un email válido');
+  return;
+}
+
       // Deshabilitar botón y mostrar loading
       btnEnviar.disabled = true;
+      cancelar.disabled = true;
       btnEnviar.innerHTML = '<svg class="animate-spin h-5 w-5 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>';
 
       try {
@@ -236,6 +245,7 @@ Mi misión es entregar esta belleza de lo simple y cotidiano a través de mi obr
       } finally {
         // Restaurar botón
         btnEnviar.disabled = false;
+        cancelar.disabled = false;
         btnEnviar.innerHTML = 'Enviar';
       }
     }
