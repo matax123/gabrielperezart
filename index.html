@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriel Perez Art</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<style>
+    .img-contain img {
+        height: 16rem; /* 64 en Tailwind = 16rem */
+        width: auto;
+        object-fit: contain;
+    }
+</style>
+<body class="bg-[rgb(30,32,37)] text-white">
+    <header class="flex flex-col justify-center items-center pt-10 pb-10">
+        <h1 class="text-4xl">ACUARELAS Y OBRAS DE AUTOR</h1>
+        <img src="./assets/firma.avif" alt="">
+        <h2 class="text-2xl">@vulpes.acuarelanomada</h2>
+    </header>
+    <section class="flex flex-wrap justify-center">
+        <img src="./assets/img1.avif" alt="">
+        <img src="./assets/img3.avif" alt="">
+        <img src="./assets/img2.avif" alt="">
+    </section>
+<section class="grid grid-cols-2 gap-8 m-4">
+    <div class="flex items-center justify-center overflow-hidden">
+        <img src="./assets/img4.avif" class="w-full h-full object-contain" alt="Imagen">
+    </div>
+    
+    <div class="flex flex-col gap-16 items-center justify-center">
+        <h2 class="text-7xl text-balance text-center">El <b class="text-yellow-500">mundo</b> a través de mis <b>ojos</b>.</h2>
+        <div class="flex flex-row gap-8 items-center justify-center gap-4">
+            <img src="./assets/img5.avif" alt="">
+            <p class="text-xl text-balance w-[40%]">Mis obras son mi registro y mi legado. Cada una de ellas está hecha con la intención de producir sensaciones y emociones en el espectador.</p>
+        </div>
+        <a class="bg-blue-500 rounded-full px-4 py-2 shadow-xl" href="https://heyzine.com/flip-book/859d21f773.html#page/1">Portafolio online</a>
+    </div>
+</section>
+
+<section class="grid grid-cols-2 gap-8 m-4">
+    <div class="flex flex-col items-center justify-center overflow-hidden gap-8">
+        <h3 class="text-5xl">Pintar con una misión</h3>
+        <p class="text-lg text-balance max-w-150 text-center">
+            El arte como forma de expresar y pertenecer al mundo.
+            <br><br>
+Ser creador y artista en un mundo donde todo debe ser rápido, reemplazable y producido en masa es un llamado a resistir.
+            <br><br>
+El crear arte nos mantiene conectados con la belleza efímera y diminuta, nos hace más humanos, sensibles y perceptivos de lo que ocurre sobre nuestras cabezas y a nuestros pies. 
+            <br><br>
+La belleza de las cosas siempre ha estado ahí, solo falta descubrirla.
+            <br><br>
+Mi misión es entregar esta belleza de lo simple y cotidiano a través de mi obra. Registrar mi vida y viajes en el papel a través del arte es mi mensaje.
+        </p>
+  <button onclick="mostrarFormulario()" class="bg-blue-500 text-white rounded-full px-4 py-2 shadow-xl hover:bg-blue-600">
+    Ponte en contacto
+  </button>
+
+    </div>
+    <div class="flex items-center justify-center overflow-hidden">
+        <img src="./assets/img6.avif" class="w-full h-full object-contain" alt="Imagen">
+    </div>
+    
+</section>
+
+  <div id="modal" class="hidden fixed inset-0 bg-[rgba(0,0,0,0.6)] bg-opacity-50 flex items-center justify-center z-50">
+    <div class="bg-[rgb(30,32,37)] text-white rounded-lg p-8 max-w-md w-full mx-4 shadow-2xl">
+      <h2 class="text-2xl font-bold mb-4">Contacto</h2>
+      
+      <form>
+        <div class="mb-4">
+          <label class="block text-sm mb-2">
+            Nombre
+          </label>
+          <input id="nombre" type="text" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline">
+        </div>
+        
+        <div class="mb-4">
+          <label class="block text-sm mb-2">
+            Email
+          </label>
+          <input id="email" type="email" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline">
+        </div>
+        
+        <div class="mb-6">
+          <label class="block text-sm mb-2">
+            Mensaje
+          </label>
+          <textarea id="mensaje" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline h-32"></textarea>
+        </div>
+        
+        <div class="flex gap-3">
+          <button type="button" onclick="enviarFormulario()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex-1">
+            Enviar
+          </button>
+          <button type="button" onclick="cerrarFormulario()" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded flex-1">
+            Cancelar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+<section class="flex flex-col gap-8 mt-12 justify-center">
+    <h3 class="text-center text-5xl">Obras originales</h3>
+    <div class="img-contain flex flex-wrap justify-center gap-4">
+        <img src="./assets/img7.avif" alt="">
+        <img src="./assets/img8.avif" alt="">
+        <img src="./assets/img9.avif" alt="">
+        <img src="./assets/img10.avif" alt="">
+        <img src="./assets/img11.avif" alt="">
+        <img src="./assets/img12.avif" alt="">
+        <img src="./assets/img13.avif" alt="">
+        <img src="./assets/img14.avif" alt="">
+        <img src="./assets/img15.avif" alt="">
+        <img src="./assets/img16.avif" alt="">
+        <img src="./assets/img17.avif" alt="">
+        <img src="./assets/img18.avif" alt="">
+        <img src="./assets/img19.avif" alt="">
+        <img src="./assets/img20.avif" alt="">
+        <img src="./assets/img21.avif" alt="">
+        <img src="./assets/img22.avif" alt="">
+        <img src="./assets/img23.avif" alt="">
+        <img src="./assets/img24.avif" alt="">
+        <img src="./assets/img25.avif" alt="">
+        <img src="./assets/img26.avif" alt="">
+        <img src="./assets/img27.avif" alt="">
+        <img src="./assets/img28.avif" alt="">
+        <img src="./assets/img29.avif" alt="">
+        <img src="./assets/img30.avif" alt="">
+        <img src="./assets/img31.avif" alt="">
+        <img src="./assets/img32.avif" alt="">
+        <img src="./assets/img33.avif" alt="">
+        <img src="./assets/img34.avif" alt="">
+        <img src="./assets/img35.avif" alt="">
+        <img src="./assets/img36.avif" alt="">
+        <img src="./assets/img37.avif" alt="">
+        <img src="./assets/img38.avif" alt="">
+        <img src="./assets/img39.avif" alt="">
+        <img src="./assets/img40.avif" alt="">
+        <img src="./assets/img41.avif" alt="">
+        <img src="./assets/img42.avif" alt="">
+        <img src="./assets/img43.avif" alt="">
+        <img src="./assets/img44.avif" alt="">
+        <img src="./assets/img45.avif" alt="">
+        <img src="./assets/img46.avif" alt="">
+        <img src="./assets/img47.avif" alt="">
+        <img src="./assets/img48.avif" alt="">
+        <img src="./assets/img49.avif" alt="">
+        <img src="./assets/img50.avif" alt="">
+        <img src="./assets/img51.avif" alt="">
+        <img src="./assets/img52.avif" alt="">
+        <img src="./assets/img53.avif" alt="">
+        <img src="./assets/img54.avif" alt="">
+        <img src="./assets/img55.avif" alt="">
+        <img src="./assets/img56.avif" alt="">
+        <img src="./assets/img57.avif" alt="">
+        <img src="./assets/img58.avif" alt="">
+        <img src="./assets/img59.avif" alt="">
+        <img src="./assets/img60.avif" alt="">
+        <img src="./assets/img61.avif" alt="">
+        <img src="./assets/img62.avif" alt="">
+        <img src="./assets/img63.avif" alt="">
+        <img src="./assets/img64.avif" alt="">
+        <img src="./assets/img65.avif" alt="">
+        <img src="./assets/img66.avif" alt="">
+        <img src="./assets/img67.avif" alt="">
+        <img src="./assets/img68.avif" alt="">
+        <img src="./assets/img69.avif" alt="">
+        <img src="./assets/img70.avif" alt="">
+        <img src="./assets/img71.avif" alt="">
+        <img src="./assets/img72.avif" alt="">
+        <img src="./assets/img73.avif" alt="">
+        <img src="./assets/img74.avif" alt="">
+        <img src="./assets/img75.avif" alt="">
+        <img src="./assets/img76.avif" alt="">
+        <img src="./assets/img77.avif" alt="">
+        <img src="./assets/img78.avif" alt="">
+        <img src="./assets/img79.avif" alt="">
+    </div>
+</section>
+
+<script>
+        let images = [];
+        let current = 0;
+
+            function mostrarFormulario() {
+      document.getElementById('modal').classList.remove('hidden');
+    }
+
+    function cerrarFormulario() {
+      document.getElementById('modal').classList.add('hidden');
+    }
+
+    async function enviarFormulario() {
+        const nombre = document.getElementById('nombre').value;
+        const email = document.getElementById('email').value;
+        const mensaje = document.getElementById('mensaje').value;
+
+        var res = await fetch('https://emailer.newgamer.cl/api/v1/email/send', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                name: nombre,
+                from: email,
+                to : 'spambasurita50@gmail.com',
+                subject: 'Solicitud de contacto',
+                message: mensaje
+            })
+        });
+        cerrarFormulario();
+    }
+
+function preloadImages() {
+    images.forEach(url => {
+        const img = new Image();
+        img.src = url;
+    });
+}
+
+// Modificar addImage para precargar al agregar
+function addImage(url) {
+    images.push(url);
+    const img = new Image();
+    img.src = url;
+    render();
+}
+
+        // Eliminar imagen por índice
+        function removeImage(index) {
+            images.splice(index, 1);
+            if (current >= images.length) current = Math.max(0, images.length - 1);
+            render();
+        }
+
+        // Navegación
+        function goToSlide(index) {
+            current = index;
+            render();
+        }
+
+        function prevSlide() {
+            current = (current - 1 + images.length) % images.length;
+            render();
+        }
+
+        function nextSlide() {
+            current = (current + 1) % images.length;
+            render();
+        }
+
+        // Renderizar carrusel
+        function render() {
+            const carousel = document.getElementById('carousel');
+            const indicators = document.getElementById('indicators');
+
+            if (images.length === 0) {
+                carousel.innerHTML = '<p class="text-gray-500">No hay imágenes</p>';
+                indicators.innerHTML = '';
+                return;
+            }
+
+            carousel.innerHTML = `<img src="${images[current]}" class="max-h-full max-w-full object-contain" alt="Slide ${current + 1}">`;
+            
+            indicators.innerHTML = images.map((_, i) => 
+                `<button onclick="goToSlide(${i})" class="w-3 h-3 rounded-full transition-all ${i === current ? 'bg-blue-500 w-8' : 'bg-gray-400'}"></button>`
+            ).join('');
+        }
+
+// Al final, después de agregar todas las imágenes
+addImage('./assets/img1.avif');
+addImage('./assets/img2.avif');
+addImage('./assets/img3.avif');
+
+preloadImages(); // Llamar aquí
+    </script>
+</body>
+</html>
